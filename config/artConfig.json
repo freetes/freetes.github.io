@@ -1,19 +1,16 @@
 {
-  "name": "李爽的个人博客",
-  "subname": "好好学习，天天向上",
   "articles": [
     {
-      "path": "./articles/about-me.md",
+      "path": "./public/articles/about-me.md",
       "title": "关于我",
       "subtitle": "",
       "date": "2018/6/17 13:02"
     },
     {
-      "path": "./articles/how-to-use-github.md",
+      "path": "./public/articles/how-to-use-github.md",
       "title": "浅谈如何使用GitHub",
       "subtitle": "",
       "date": "2018/6/17 19:02"
     }
-  ],
-  "end": "Hello, world.😁"
+  ]
 }
