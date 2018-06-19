@@ -1,13 +1,13 @@
 {
   "articles": [
     {
-      "path": "./public/articles/about-me.md",
+      "path": "./articles/about-me.md",
       "title": "关于我",
       "subtitle": "",
       "date": "2018/6/17 13:02"
     },
     {
-      "path": "./public/articles/how-to-use-github.md",
+      "path": "./articles/how-to-use-github.md",
       "title": "浅谈如何使用GitHub",
       "subtitle": "",
       "date": "2018/6/17 19:02"
