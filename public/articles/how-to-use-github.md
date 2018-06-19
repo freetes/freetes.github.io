@@ -26,7 +26,7 @@
     git config --global user.email "email@example.com"
     ```
 3. 创建一个仓库
-登录账号后，在任何页面的右上角，单击+，然后单击新建存储库![创建仓库](../img/how-to-use-github.png)
+登录账号后，在任何页面的右上角，单击+，然后单击新建存储库![创建仓库](./public/img/how-to-use-github.png)
 4. 安装[GitHub Desktop](https://desktop.github.com/)，[->使用教程<-](https://help.github.com/desktop/guides/contributing-to-projects/)
 
 ## Good luck
