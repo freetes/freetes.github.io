@@ -25,13 +25,9 @@
         ```shell
         git config --global user.email "email@example.com"
         ```
-3. 在GitHub上创建一个仓库，用于托管项目
-    1. 登录账号后，在任何页面的右上角，单击+，然后单击新建存储库![创建仓库](https://help.github.com/assets/images/help/repository/repo-create.png)
-    2. 为仓库输入一个简短而难忘的名称![输入项目名](https://help.github.com/assets/images/help/repository/create-repository-name.png)
-    3. 添加一些描述![输入描述](https://help.github.com/assets/images/help/repository/create-repository-desc.png)
-    4. 选择 **Public**![选择模式](https://help.github.com/assets/images/help/repository/create-repository-public-private.png)
-    5. 勾选 **Initialize this repository with a README**![readme](https://help.github.com/assets/images/help/repository/create-repository-init-readme.png)
-    6. 单击 **Create repository**，即完成新建仓库操作
+3. 创建一个仓库
+登录账号后，在任何页面的右上角，单击+，然后单击新建存储库![创建仓库](https://images2017.cnblogs.com/blog/1250458/201710/1250458-20171017153553099-864426472.png)
+
 4. 安装[GitHub Desktop](https://desktop.github.com/)，[->使用教程<-](https://help.github.com/desktop/guides/contributing-to-projects/)
 
 ## Good luck
