@@ -6,9 +6,8 @@ app.use('/public', express.static('public'));
 app.use('/config', express.static('config'));
 
 app.get('/', (req, res) => {
-  fs.readFile('./index.html', 'utf-8', (err, data)=>{
-    html = data
-    return res.end(html)
+  fs.readFile('./index.html', 'utf-8', data=>{
+    return res.end(data)
   })
 });
 
