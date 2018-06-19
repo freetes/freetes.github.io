@@ -1,4 +1,4 @@
-const configLink = 'https://freetes.github.io/My-Blog-in-GitHub/config.json'
+const configLink = './config.json'
 
 function showArticle(node, info){
   $(".list").children().removeClass()
