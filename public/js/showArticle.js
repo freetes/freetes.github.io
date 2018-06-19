@@ -62,7 +62,7 @@ ajaxPromise('get', webConfigLink).then(res=>{
     articles.sort((a, b)=>new Date(b.date)-new Date(a.date))
     for(let item of articles){
       let li = document.createElement("li")
-      li.id = `${item.title}`
+      li.id = `#${item.title}`
       li.onclick = function () {
         showArticle(this, item)
       }
@@ -73,9 +73,10 @@ ajaxPromise('get', webConfigLink).then(res=>{
       `
       $(".list").append(li)
     }
+    let hash = decodeURIComponent(location.hash).split('#')[1]
     if(decodeURIComponent(location.hash)){
       for(let item of $(".list").children()){
-        if('#' + item.id == decodeURIComponent(location.hash))
+        if(item.id == decodeURIComponent(location.hash))
           return $(item).click()
       }
     }

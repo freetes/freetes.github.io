@@ -18,16 +18,15 @@
     1. [下载对应版本的git安装包并安装](https://git-scm.com/downloads)
     2. 打开 Git Bash
     3. 设置用户名
-        ```shell
-        git config --global user.name "xiaoming"
-        ```
+    ```shell
+    git config --global user.name "xiaoming"
+    ```
     4. 设置邮箱
-        ```shell
-        git config --global user.email "email@example.com"
-        ```
+    ```shell
+    git config --global user.email "email@example.com"
+    ```
 3. 创建一个仓库
 登录账号后，在任何页面的右上角，单击+，然后单击新建存储库![创建仓库](https://images2017.cnblogs.com/blog/1250458/201710/1250458-20171017153553099-864426472.png)
-
 4. 安装[GitHub Desktop](https://desktop.github.com/)，[->使用教程<-](https://help.github.com/desktop/guides/contributing-to-projects/)
 
 ## Good luck

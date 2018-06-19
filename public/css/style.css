@@ -68,11 +68,11 @@ body {
 
 header{
   border-bottom: 1px solid lightgray;
-  cursor: pointer;
 }
 
 #blogName{
   font-size: 2em;
+  cursor: pointer;
 }
 #subName{
   color: gray
