@@ -1,2 +1,1 @@
-# freetes.github.io
-Hello world
+# Good luck!
