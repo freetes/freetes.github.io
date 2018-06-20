@@ -131,6 +131,10 @@ footer span:last-child{
   color: white;
 }
 
+.text-center{
+  text-align: center
+}
+
 @media (max-width: 600px) {
   .container-full{
     float: left;

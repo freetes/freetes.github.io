@@ -119,4 +119,6 @@ function createHtml() {
   })
 }
 
-createHtml()
+$(document).ready(()=>{
+  createHtml()
+})
