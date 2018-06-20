@@ -26,3 +26,10 @@ function toggleList() {
     })
   }
 }
+
+$(window).scroll(()=>{
+  if( $(document).scrollTop() >= 200 )
+    $(".tools").css("display", "block")
+  else
+    $(".tools").css("display", "none")
+})
