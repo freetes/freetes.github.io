@@ -66,7 +66,7 @@ function createArtList(data) {
     for(let tag of item.tags){
       tagsSpan += `<span class='tag'>${tag}</span>`
     }
-    item.tags = "<p class='tagsP'>" + tagsSpan + "</p>"
+    item.tags = "<p>" + tagsSpan + "</p>"
     li.id = `#${item.title}`
     li.onclick = function () {
       showArticle(this, item)
