@@ -36,14 +36,23 @@ header{
 }
 .list li{
   list-style: none;
-  width: 100%;
+  width: 90%;
   cursor: pointer;
   margin: 10px 0;
-  padding: 0 10px;
-  display: block
+  padding: 0 5%;
+  display: block;
+  border-bottom: 1px solid lightgray
+}
+.list li:last-child{
+  border-bottom: none
+}
+.list li p{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .selected{
-  border-left: 5px solid red;
+  border-left: 5px solid black;
   color: black
 }
 
@@ -71,6 +80,16 @@ header{
 .markdown-body .date{
   text-align: right;
   border-bottom: 1px lightgray solid
+}
+
+.tag{
+  height: 20px;
+  margin: 0 5px;
+  background-color: #555;
+  color:white;
+  padding: 0 2px;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 footer{
@@ -110,10 +129,6 @@ footer span:last-child{
   font-size: 30px;
   line-height: 40px;
   color: white;
-}
-
-.text-center{
-  text-align: center
 }
 
 @media (max-width: 600px) {

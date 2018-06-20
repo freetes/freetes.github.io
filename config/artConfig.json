@@ -3,20 +3,32 @@
     {
       "path": "./articles/about-me.md",
       "title": "关于我",
-      "subtitle": "",
-      "date": "2018/6/17 13:02"
+      "subtitle": "about me",
+      "date": "2018/6/17 13:02",
+      "tags": [
+        "生活", "原创"
+      ]
     },
     {
       "path": "./articles/how-to-use-github.md",
       "title": "浅谈如何使用GitHub",
       "subtitle": "",
-      "date": "2018/6/17 19:02"
+      "date": "2018/6/17 19:02",
+      "tags": [
+        "技术", "生活", "原创"
+      ]
     },
     {
       "path": "./articles/markdown-grammar.md",
       "title": "Markdown语法",
       "subtitle": "",
-      "date": "2018/6/20 15:17"
+      "date": "2018/6/20 15:17",
+      "tags": [
+        "技术", "收藏"
+      ]
     }
+  ],
+  "tags": [
+    "技术", "生活", "原创", "收藏"
   ]
 }

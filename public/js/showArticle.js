@@ -27,6 +27,7 @@ function showArticle(node, info){
       <h2 class='title'>${info.title}</h4>
       <p class='subtitle'>${info.subtitle}</p>
       <p class='date'>${info.date}</p>
+      ${info.tags}
     `
     $('.markdown-body').html(header)
     
@@ -61,14 +62,24 @@ function createArtList(data) {
   articles.sort((a, b)=>new Date(b.date)-new Date(a.date))
   for(let item of articles){
     let li = document.createElement("li")
+    let tagsSpan = ''
+    for(let tag of item.tags){
+      tagsSpan += `<span class='tag'>${tag}</span>`
+    }
+    item.tags = "<p class='tagsP'>" + tagsSpan + "</p>"
     li.id = `#${item.title}`
     li.onclick = function () {
       showArticle(this, item)
     }
+    // <span class='date subtext'>写于${item.date}</span>
+    // <p class='title'>${item.title}</p>
+
     li.innerHTML = `
-      <p class='title'>${item.title}</p>
-      <span class='subtitle subtext'>${item.subtitle}</span>
-      <span class='date subtext'>写于${item.date}</span>
+      <p>
+        <span class='title'>${item.title}</span>
+        <span class='subtitle subtext'>${item.subtitle}</span>
+      </p>
+      ${item.tags}
     `
     $(".list").append(li)
   }
