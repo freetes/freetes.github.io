@@ -14,7 +14,7 @@ Markdown 允许你通过编写易读、易写的富文本格式，然后很方�
 ```html
 # h1标题
 
-将被转换成
+=>>
 
 <h1>h1标题</h1>
 
@@ -36,7 +36,7 @@ Markdown 允许你通过编写易读、易写的富文本格式，然后很方�
 ```html
 **这就是高富帅啊**
 
-将被转换成
+=>>
 
 <b>这就是高富帅啊</b>
 
@@ -51,7 +51,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 ```html
 [我的博客](https://freetes.github.io)
 
-将被转换成
+=>>
 
 <a href="https://freetes.github.io">我的博客</a>
 ```
@@ -64,7 +64,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 ```html
 ![GitHub的Logo](./public/img/github.jpg)
 
-将被转换成
+=>>
 
 <img src=".\public\img\github.jpg" alt="GitHub的Logo">
 ```
@@ -81,7 +81,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 1. Hello
 2. World
 
-将被转换成
+=>>
 
 <ol>
   <li>Hello</li>
@@ -99,7 +99,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 * Hello
 * World
 
-将被转换成
+=>>
 
 <ul>
   <li>Hello</li>
@@ -118,7 +118,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 ```html
 > 段落前面添加大于号和空格，就能形成引用段落
 
-将被转换成
+=>>
 
 <blockquote>
   <p>段落前面添加大于号和空格，就能形成引用段落</p>
@@ -133,7 +133,7 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 ```html
 `内联代码`
 
-将被转换成
+=>>
 
 <code>内联代码</code>
 ```
@@ -142,36 +142,36 @@ __这就是高富帅啊__ == <b>这就是高富帅啊</b>
 
 ## 代码块
 
-```c
-|```c // 这里是代码的语言类型
-|//将代码用 ``` 包含起来即可
-|print("helloworld")
-|```
-```
-将被转换成
-```html
-<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token comment">//将代码用 ``` 包含起来即可</span>
-<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"helloworld"</span><span class="token punctuation">)</span>
-</pre>
-```
+    ```
+    //将代码用 ``` 包含起来即可
+    print("hello")
+    print("world")
+    ```
+
+    =>>
+
+    <pre>
+      <code>print("hello")
+      print("world")</code>
+    </pre>
 
 效果如下：
-```c
-//将代码用 ``` 包含起来即可
-print("helloworld")
-```
+
+    print("hello")
+    print("world")
+
 
 ## 水平分割线
 
-```markdown
-三个或更多的星号或横杠
+```html
+三个或更多的星号或横杠，例如：
 ***
 ---
 *****
 ------
-```
-将被转换成
-```html
+
+=>>
+
 <hr>
 ```
 

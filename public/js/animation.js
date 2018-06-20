@@ -13,7 +13,7 @@ function toggleList() {
     }
     else{
       $(".list").toggle(animateTime).promise().done(function (){
-        $(".markdown-body").animate({ width: '80%', padding: '8px 9%', margin: '0 1%'}, animateTime).promise().done(()=>{
+        $(".markdown-body").animate({ width: '70%', padding: '8px 14%', margin: '0 1%'}, animateTime).promise().done(()=>{
           $("#blogName").attr("onclick", "toggleList()")
         })
       })
