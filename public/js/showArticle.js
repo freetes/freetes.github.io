@@ -1,7 +1,7 @@
 const webConfigLink = './config/webConfig.json',
-      artConfigLink = './config/artConfig.json'
+  artConfigLink = './config/artConfig.json'
 
-// ajax Promise version
+// ajax(Promise version)
 function ajaxPromise(method, url) {
   return new Promise((resolve, reject)=>{
     $.ajax({
@@ -17,9 +17,14 @@ function ajaxPromise(method, url) {
   })
 }
 
+function beginAnimation(node){
+  $(node).css({'margin-top': '-20px'})
+  return $(node).animate({'opacity': 1, 'margin-top': '0px'}, 500).promise().done()
+}
+
 function showArticle(node, info){
-  $(".list").children().removeClass()
-  $(node).addClass("selected")
+  $('.list').children().removeClass()
+  $(node).addClass('selected')
   location.hash = node.id
   // 无缓存，调用ajax获取
   if(!localStorage.getItem(info.title)){
@@ -56,23 +61,28 @@ function getArtConfig() {
   return ajaxPromise('get', artConfigLink)
 }
 
+function createHeader(data) {
+  document.title = `${data.title}-${data.subtitle}`
+  $('#blogName').text(data.title)
+  $('#subName').text(data.subtitle)
+  $('#endWords').text(data.end)
+}
+
 function createArtList(data) {
   let articles = data.articles
   // 按时间排序
   articles.sort((a, b)=>new Date(b.date)-new Date(a.date))
   for(let item of articles){
-    let li = document.createElement("li")
+    let li = document.createElement('li')
     let tagsSpan = ''
     for(let tag of item.tags){
       tagsSpan += `<span class='tag'>${tag}</span>`
     }
-    item.tags = "<p>" + tagsSpan + "</p>"
+    item.tags = '<p>' + tagsSpan + '</p>'
     li.id = `#${item.title}`
     li.onclick = function () {
       showArticle(this, item)
     }
-    // <span class='date subtext'>写于${item.date}</span>
-    // <p class='title'>${item.title}</p>
 
     li.innerHTML = `
       <p>
@@ -81,44 +91,43 @@ function createArtList(data) {
       </p>
       ${item.tags}
     `
-    $(".list").append(li)
+    $('.list').append(li)
   }
   // 根据URL#后的参数找到对应的文章并点击
   // 伪造搜索功能
-  let hash = decodeURIComponent(location.hash).split('#')[1]
   if(decodeURIComponent(location.hash)){
-    for(let item of $(".list").children()){
+    for(let item of $('.list').children()){
       if(item.id == decodeURIComponent(location.hash))
         return $(item).click()
     }
   }
-  $(".list").children().first().click()
+  $('.list').children().first().click()
 }
 
 function createHtml() {
-  if(!localStorage.getItem('title') || !localStorage.getItem('subtitle') || !localStorage.getItem('end')){
+  if(!localStorage.getItem('webInfo')){
     getWebConfig().then(res=>{
-      // 保存缓存
-      localStorage.setItem('title', res.title)
-      localStorage.setItem('subtitle', res.subtitle)
-      localStorage.setItem('end', res.end)
-      document.title = res.title
-      $("#blogName").text(res.title)
-      $("#subName").text(res.subtitle)
-      $("#endWords").text(res.end)
+      // 保存网页信息缓存
+      localStorage.setItem('webInfo', JSON.stringify(res))
+      createHeader(res)
     })
   }
   else{
-    document.title = localStorage.getItem('title')
-    $("#blogName").text(localStorage.getItem('title'))
-    $("#subName").text(localStorage.getItem('subtitle'))
-    $("#endWords").text(localStorage.getItem('end'))
+    createHeader(JSON.parse(localStorage.getItem('webInfo')))
   }
-  getArtConfig().then(res=>{
-    createArtList(res)
-  })
+  if(!localStorage.getItem('artInfo')){
+    getArtConfig().then(res=>{
+      // 保存文章信息缓存
+      localStorage.setItem('artInfo', JSON.stringify(res))
+      createArtList(res)
+    })
+  }
+  else{
+    createArtList(JSON.parse(localStorage.getItem('artInfo')))
+  }
 }
 
 $(document).ready(()=>{
   createHtml()
+  beginAnimation($('header')).then(()=>beginAnimation($('.list'))).then(()=>beginAnimation($('article'))).then(()=>beginAnimation($('footer')))
 })
