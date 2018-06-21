@@ -27,7 +27,7 @@ function showArticle(node, info){
   $(node).addClass('selected')
   location.hash = node.id
   // 无缓存，调用ajax获取
-  if(!localStorage.getItem(info.title)){
+  if(!sessionStorage.getItem(info.title)){
     const header = `
       <h2 class='title'>${info.title}</h4>
       <p class='subtitle'>${info.subtitle}</p>
@@ -43,13 +43,13 @@ function showArticle(node, info){
           ${marked(data)}
         </div>
       `
-      localStorage.setItem(info.title, html)
+      sessionStorage.setItem(info.title, html)
       $('.markdown-body').html(html)
     })
   }
   // 直接获取缓存
   else{
-    $('.markdown-body').html(localStorage.getItem(info.title))
+    $('.markdown-body').html(sessionStorage.getItem(info.title))
   }
 }
 
@@ -106,25 +106,25 @@ function createArtList(data) {
 
 function createHtml() {
   return new Promise(function (resolve, reject) {
-    if(!localStorage.getItem('webInfo')){
+    if(!sessionStorage.getItem('webInfo')){
       getWebConfig().then(res=>{
         // 保存网页信息缓存
-        localStorage.setItem('webInfo', JSON.stringify(res))
+        sessionStorage.setItem('webInfo', JSON.stringify(res))
         createHeader(res)
       })
     }
     else{
-      createHeader(JSON.parse(localStorage.getItem('webInfo')))
+      createHeader(JSON.parse(sessionStorage.getItem('webInfo')))
     }
-    if(!localStorage.getItem('artInfo')){
+    if(!sessionStorage.getItem('artInfo')){
       getArtConfig().then(res=>{
         // 保存文章信息缓存
-        localStorage.setItem('artInfo', JSON.stringify(res))
+        sessionStorage.setItem('artInfo', JSON.stringify(res))
         createArtList(res)
       })
     }
     else{
-      createArtList(JSON.parse(localStorage.getItem('artInfo')))
+      createArtList(JSON.parse(sessionStorage.getItem('artInfo')))
     }
     resolve()
   })

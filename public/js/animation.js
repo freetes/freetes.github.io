@@ -27,13 +27,6 @@ function toggleList () {
   }
 }
 
-window.onscroll = debounce(100, function() {
-  if( $(document).scrollTop() >= 200 )
-    $('.tools').css({'display': 'block'})
-  else
-    $('.tools').css({'display': 'none'})
-})
-
 // 节流函数
 function debounce(idle, action){
   let last
@@ -43,5 +36,21 @@ function debounce(idle, action){
     last = setTimeout(function(){
       action.apply(ctx, args)
     }, idle)
+  }
+}
+
+window.onscroll = debounce(100, function() {
+  if( $(document).scrollTop() >= 200 )
+    $('.tools').css({'display': 'block'})
+  else
+    $('.tools').css({'display': 'none'})
+})
+
+window.onhashchange = function () {
+  if(decodeURIComponent(location.hash)){
+    for(let item of $('.list').children()){
+      if(item.id == decodeURIComponent(location.hash))
+        return $(item).click()
+    }
   }
 }
