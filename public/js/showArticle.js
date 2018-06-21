@@ -105,29 +105,33 @@ function createArtList(data) {
 }
 
 function createHtml() {
-  if(!localStorage.getItem('webInfo')){
-    getWebConfig().then(res=>{
-      // 保存网页信息缓存
-      localStorage.setItem('webInfo', JSON.stringify(res))
-      createHeader(res)
-    })
-  }
-  else{
-    createHeader(JSON.parse(localStorage.getItem('webInfo')))
-  }
-  if(!localStorage.getItem('artInfo')){
-    getArtConfig().then(res=>{
-      // 保存文章信息缓存
-      localStorage.setItem('artInfo', JSON.stringify(res))
-      createArtList(res)
-    })
-  }
-  else{
-    createArtList(JSON.parse(localStorage.getItem('artInfo')))
-  }
+  return new Promise(function (resolve, reject) {
+    if(!localStorage.getItem('webInfo')){
+      getWebConfig().then(res=>{
+        // 保存网页信息缓存
+        localStorage.setItem('webInfo', JSON.stringify(res))
+        createHeader(res)
+      })
+    }
+    else{
+      createHeader(JSON.parse(localStorage.getItem('webInfo')))
+    }
+    if(!localStorage.getItem('artInfo')){
+      getArtConfig().then(res=>{
+        // 保存文章信息缓存
+        localStorage.setItem('artInfo', JSON.stringify(res))
+        createArtList(res)
+      })
+    }
+    else{
+      createArtList(JSON.parse(localStorage.getItem('artInfo')))
+    }
+    resolve()
+  })
 }
 
 $(document).ready(()=>{
-  createHtml()
-  beginAnimation($('header')).then(()=>beginAnimation($('.list'))).then(()=>beginAnimation($('article'))).then(()=>beginAnimation($('footer')))
+  createHtml().then(()=>{
+    beginAnimation($('header')).then(()=>beginAnimation($('.list'))).then(()=>beginAnimation($('article'))).then(()=>beginAnimation($('footer')))
+  })
 })
