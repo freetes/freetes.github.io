@@ -51,6 +51,7 @@ function showArticle(node, info){
   else{
     $('.markdown-body').html(sessionStorage.getItem(info.title))
   }
+  $('html, body').animate({scrollTop: '0px'})
 }
 
 function getWebConfig() {
