@@ -26,6 +26,15 @@
       "tags": [
         "技术", "收藏"
       ]
+    },
+    {
+      "path": "./articles/js-ctrl-url.md",
+      "title": "'伪造'URL，了解一下",
+      "subtitle": "This article explains the use of JavaScript to control the url",
+      "date": "2018/6/21 20:07",
+      "tags": [
+        "js", "技术", "原创"
+      ]
     }
   ],
   "tags": [
