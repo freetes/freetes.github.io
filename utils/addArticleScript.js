@@ -74,7 +74,7 @@ readFilePromise(path.join(__dirname, '../config/artConfig.json')).then(json=>{
   for(let file of files){
     getFileStat(path.join(__dirname, '../articles/', file)).then(time=>{
       let date = new Date(time.birthtime)
-      date = date.getFullYear() + '/' + (date.getMonth()+1) + '/' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes()
+      date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate()
       articles.push({
         path: './articles/' + file,
         date

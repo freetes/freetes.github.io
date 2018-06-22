@@ -38,7 +38,7 @@ header{
   list-style: none;
   width: 90%;
   cursor: pointer;
-  padding: 10px 5%;
+  padding: 5px 5%;
   display: block;
   border-bottom: 1px solid lightgray
 }
