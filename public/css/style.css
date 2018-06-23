@@ -14,6 +14,7 @@ body {
 }
 
 header{
+  height: 85px;
   background-color: #f5f5f5 !important;
 }
 
@@ -28,6 +29,13 @@ header{
 
 #subName{
   color: gray
+}
+
+#tagSpan{
+  float: right;
+  height: auto;
+  width: auto;
+  line-height: 85px;
 }
 
 .list{
@@ -134,7 +142,7 @@ footer span:last-child{
   text-align: center
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .container-full{
     float: left;
     width: 100%;
@@ -175,7 +183,7 @@ footer span:last-child{
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 960px) {
   .container-full{
     float: left;
     width: 100%;
