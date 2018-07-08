@@ -4,7 +4,7 @@
       "path": "./articles/about-me.md",
       "title": "关于我",
       "subtitle": "about me",
-      "date": "2018-6-17",
+      "date": "2018-6-17 16:32",
       "tags": [
         "生活",
         "原创"
@@ -14,7 +14,7 @@
       "path": "./articles/how-to-use-github.md",
       "title": "浅谈如何使用GitHub",
       "subtitle": "",
-      "date": "2018-6-17",
+      "date": "2018-6-17 17:52",
       "tags": [
         "技术",
         "生活",
@@ -25,7 +25,7 @@
       "path": "./articles/markdown-grammar.md",
       "title": "Markdown语法",
       "subtitle": "",
-      "date": "2018-6-20",
+      "date": "2018-6-20 9:20",
       "tags": [
         "技术",
         "收藏"
@@ -35,7 +35,7 @@
       "path": "./articles/js-ctrl-url.md",
       "title": "'伪造'URL，了解一下",
       "subtitle": "This article explains the use of JavaScript to control the url",
-      "date": "2018-6-21",
+      "date": "2018-6-21 21:20",
       "tags": [
         "js",
         "技术",
@@ -44,7 +44,7 @@
     },
     {
       "path": "./articles/css3-flex.md",
-      "date": "2018-6-23",
+      "date": "2018-6-23 22:40",
       "title": "CSS3 Flex布局参考",
       "subtitle": "",
       "tags": [
