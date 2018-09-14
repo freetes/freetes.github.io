@@ -1,8 +1,7 @@
-## macos上一些好用的软件
 
-买了mba快两个月了，好长一段时间在寻找适合程序猿的macos软件。结果如下：
+买了mba快两个月了，收集了一些适合程序猿的macos软件~
 
-> 常用的Chrome/Firefox、微信/QQ、网易云音乐/QQ音乐、iTerm
+> 常用的Chrome/Firefox、微信/QQ、网易云音乐/QQ音乐、iTerm就不说了
 
 ### [IINA](https://lhc70000.github.io/iina/) 视频播放器
 
