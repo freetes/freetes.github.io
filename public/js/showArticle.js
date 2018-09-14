@@ -1,5 +1,5 @@
 const webConfigLink = './config/webConfig.json',
-  artConfigLink = './config/artConfig.json'
+      artConfigLink = './config/artConfig.json'
 
 // ajax(Promise version)
 function ajaxPromise(method, url) {
@@ -40,6 +40,7 @@ function showArticle(node, info){
     $('.markdown-body').html(header)
     
     ajaxPromise('get', info.path).then(data=>{
+      console.log(data)
       const html = `
         ${header}
         <div class='content'>

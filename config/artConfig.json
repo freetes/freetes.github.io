@@ -52,6 +52,16 @@
         "技术",
         "收藏"
       ]
+    },
+    {
+      "path": "./articles/macos-apps.md",
+      "date": "2018-9-14 18:01",
+      "title": "安利一些Macos上好用的软件",
+      "subtitle": "全是免费的啦",
+      "tags": [
+        "macos",
+        "安利"
+      ]
     }
   ],
   "tags": [
@@ -60,6 +70,8 @@
     "原创",
     "收藏",
     "js",
-    "CSS"
+    "CSS",
+    "macos",
+    "安利"
   ]
 }
