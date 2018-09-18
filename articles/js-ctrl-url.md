@@ -1,4 +1,4 @@
-这几天在完善博客的时候，遇到了一个坑：如何伪造指定文章的url？
+这几天在完善博客的时候，遇到了一个坑：如何伪造指定文章的 url？
 
 > Web端实现路由有如下两种技术模式。
 > * 基于Hash
@@ -8,22 +8,24 @@
 >
 >History API 通过监听HTML 5添加的popstate事件实现路由，URL格式和传统的后端路由一致，这也是这种模式最大的有点。缺点是只有新型浏览器支持该特性，且需要后端路由配合，因为当用户访问一个History路由实现的路径时，页面仍会向后端发送请求，同时会触发网页重载。
 
-由于此博客是放在GitHub Pages上，没有后台服务器的支持，无法通过服务器端SSR实现。
+由于此博客是放在 GitHub Pages 上，没有后台服务器的支持，无法通过服务器端SSR实现。
 
 毫不犹豫的选择了基于Hash的模式，其优点如下：
 * 改变#不会触发网页重载
+
   > 完美的实现了动态加载
 * 改变#会改变浏览器的访问历史
+
   > 可用于网页后退前进功能的实现
 
 **理清操作流程**
 
-1. 用户输入url
-2. 从输入的url里获取hash，并解密  
-  `decodeURIComponent(location.hash)`
-3. 用解密后的hash值与list-item进行匹配，如果匹配成功就点击当前item，未成功则点击list的第一个item
-4. url导航指定文章完成
-5. 用户点击某个item时，改变location.hash为当前item的ID值
+1. 用户输入 url
+2. 从输入的 url 里获取 hash，并解密  
+    `decodeURIComponent(location.hash)`
+3. 用解密后的 hash 值与 list-item 进行匹配，如果匹配成功就点击当前 item，未成功则点击 list 的第一个 item  
+4. url 导航指定文章完成
+5. 用户点击某个 item 时，改变 location.hash 为当前 item 的 ID 值
 
 **代码实现**
 
