@@ -40,7 +40,6 @@ function showArticle(node, info){
     $('.markdown-body').html(header)
     
     ajaxPromise('get', info.path).then(data=>{
-      console.log(data)
       const html = `
         ${header}
         <div class='content'>
