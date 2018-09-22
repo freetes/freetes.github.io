@@ -11,7 +11,8 @@ body{
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   font-size: 14px;
   line-height: 20px;
-  color: #555;
+  color: white;
+  background-color: #101010;
 }
 
 header{
@@ -21,6 +22,7 @@ header{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 }
 header > div{
   width: 80%;
@@ -36,6 +38,12 @@ div#mainDiv{
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+}
+div#mainDiv > div.list{
+  width: 250px;
+}
+div#mainDiv > div.markdown-body{
+  flex: 1 1 auto;
 }
 
 footer{
