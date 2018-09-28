@@ -5,7 +5,7 @@ function toggleList (node) {
   // 电脑端
   if(screen.width > 960){
     if($('.list').css('display') == 'none'){
-      $('.markdown-body').animate({width: '67%', padding: '20px 1%', margin: '0 1% 0 0'}, animateTime).promise().done(()=>{
+      $('.markdown-body').animate({width: '100%', padding: '5px 10px', margin: '0 10px'}, animateTime).promise().done(()=>{
         $('.list').toggle(animateTime).promise().done(()=>{
           $(node).attr('onclick', 'toggleList()')
         })
