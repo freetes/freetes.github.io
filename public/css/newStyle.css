@@ -36,6 +36,7 @@ div#content > header{
   justify-content: flex-start;
   align-items: center;
   background-color: white;
+  opacity: 0;
 }
 header > #blogName{
   font-size: 26px;
@@ -57,11 +58,13 @@ div#mainDiv{
 }
 div#mainDiv > div.list{
   width: 250px;
+  opacity: 0;
 }
 div#mainDiv > article.markdown-body{
   margin: 0 10px;
   padding: 5px 10px;
   flex: 1 1 auto;
+  opacity: 0;
 }
 
 footer{
@@ -69,6 +72,8 @@ footer{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  opacity: 0;
+  margin: 10px 0;
 }
 
 div.tools{
