@@ -6,8 +6,8 @@ let artConfig
 
 //创建readline接口实例
 var rl = readline.createInterface({
-  input:process.stdin,
-  output:process.stdout
+  input: process.stdin,
+  output: process.stdout
 })
 
 function readDirPromise(url) {
