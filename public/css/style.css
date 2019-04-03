@@ -36,11 +36,10 @@ div#content > header{
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  opacity: 0;
   line-height: 30px;
 }
 header > #blogName{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 header > #subName{
@@ -98,6 +97,7 @@ div.tools{
   cursor: pointer;
   padding: 5px 5%;
   display: block;
+  color: #121212;
   border-bottom: 1px solid lightgray;
 }
 .list li:last-child{
@@ -109,9 +109,10 @@ div.tools{
   overflow: hidden;
   padding: 4px 0
 }
-.selected{
+.list li.selected{
   border-left: 2px solid black;
-  color: black
+  color: black;
+  font-weight: bold;
 }
 .title{
   font-size: 16px;
