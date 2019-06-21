@@ -186,7 +186,7 @@ function createArtList(data) {
         return $(item).click()
     }
   }
-  $('.list').children().first().click()
+  $('.list li').first().click()
 }
 
 function createHtml() {

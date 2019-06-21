@@ -51,7 +51,7 @@ window.onscroll = debounce(100, function() {
 // 
 window.onhashchange = function () {
   if(decodeURIComponent(location.hash)){
-    for(let item of $('.list').children()){
+    for(let item of $('.list li')){
       if(item.id == decodeURIComponent(location.hash))
         return $(item).click()
     }
