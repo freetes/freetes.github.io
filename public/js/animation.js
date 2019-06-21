@@ -1,11 +1,12 @@
 const ANIMATION_TIME = 300
 
+// 文章占位大小变化动画
 function toggleList (node) {
   $(node).removeAttr('onclick')
   // 电脑端
   if(screen.width > 960){
     if($('.list').css('display') == 'none'){
-      $('.markdown-body').animate({width: '100%', padding: '20px 10px', margin: '0 10px'}, ANIMATION_TIME).promise().done(()=>{
+      $('.markdown-body').animate({width: '100%', padding: '20px 10px'}, ANIMATION_TIME).promise().done(()=>{
         $('.list').toggle(ANIMATION_TIME).promise().done(()=>{
           $(node).attr('onclick', 'toggleList(this)')
         })
@@ -13,7 +14,7 @@ function toggleList (node) {
     }
     else{
       $('.list').toggle(ANIMATION_TIME).promise().done(function (){
-        $('.markdown-body').animate({ width: '70%', padding: '20px 14%', margin: '0 10px'}, ANIMATION_TIME).promise().done(()=>{
+        $('.markdown-body').animate({ width: '70%', padding: '20px 14%'}, ANIMATION_TIME).promise().done(()=>{
           $(node).attr('onclick', 'toggleList(this)')
         })
       })
@@ -39,6 +40,7 @@ function debounce(idle, action){
   }
 }
 
+// 置顶按钮
 window.onscroll = debounce(100, function() {
   if( $(document).scrollTop() >= 200 )
     $('.tools').css({'display': 'block'})
@@ -46,6 +48,7 @@ window.onscroll = debounce(100, function() {
     $('.tools').css({'display': 'none'})
 })
 
+// 
 window.onhashchange = function () {
   if(decodeURIComponent(location.hash)){
     for(let item of $('.list').children()){

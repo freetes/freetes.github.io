@@ -4,7 +4,7 @@ const path = require('path')
 
 let artConfig
 
-//创建readline接口实例
+// 创建 readline 接口实例
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -66,32 +66,41 @@ function addArticles(files) {
 function updateConfig() {
   fs.writeFile(path.join(__dirname, '../config/artConfig.json'), JSON.stringify(artConfig, null, space=2), (err)=>{
     if(err) console.log(err)
+
     process.exit()
   })
 }
 
 readFilePromise(path.join(__dirname, '../config/artConfig.json')).then(json=>{
   artConfig = JSON.parse(json)
+
   return readDirPromise(path.join(__dirname, '../articles'))
 }).then(files=>{
   let articles = []
+
   for(let file of files){
-    getFileStat(path.join(__dirname, '../articles/', file)).then(time=>{
+    getFileStat(path.join(__dirname, '../articles/', file))
+    .then(time=>{
       let date = new Date(time.birthtime)
+      
       date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes()
+     
       articles.push({
         path: './articles/' + file,
         date
       })
+      
       // 读取完毕
       if(articles.length == files.length){
         let notAdded = []
+        
         for(let item of articles){
           // 找到尚未更新的文章
           if(!artConfig.articles.filter((element, index, array)=>element.path == item.path).length){
             notAdded.push(item)
           }
         }
+
         if(notAdded.length == 0){
           console.log('无新文章！')
           process.exit()
