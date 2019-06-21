@@ -57,3 +57,14 @@ window.onhashchange = function () {
     }
   }
 }
+
+// Hello World
+console.log(`
+  Hey, there,
+
+    I'm so honor for your visiting, and thanks for it.🎆
+    Please contact me if you find anything wrong.😊
+
+    email: freetes@foxmail.com
+    
+`)
