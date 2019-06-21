@@ -103,13 +103,15 @@ function createHeader(data) {
 
 // 生成文章列表
 function createArtList(data) {
-  let articles = data.articles
+  let articles = data.articles.sort(()=>1)
 
   let finalData = [], index = -1
 
   articles.forEach(element => {
-    let artDate = new Date(element.date)
-    artDate = artDate.getFullYear() + '-' + (artDate.getMonth() + 1)
+    let artDate = element.date.split(' ')[0]
+
+    artDate = element.date.split('-')
+    artDate = artDate[0] + '-' + artDate[1]
 
     let alreadyExists = finalData.some((e, i) => {
       if (artDate == e.date) {
@@ -124,13 +126,11 @@ function createArtList(data) {
         date: artDate,
         data: [element]
       })
-    } 
+    }
     else {
-      finalData[index].data.unshift(element)
+      finalData[index].data.push(element)
     }
   })
-
-  finalData.sort((a, b)=>new Date(b.date)-new Date(a.date))
 
   finalData.forEach(element=>{
     let p = document.createElement('p')
@@ -153,7 +153,7 @@ function createArtList(data) {
       `
       $('.list').append(li)
 
-      
+      // 获取文章内容
       $.get(item.path).then(data=>{
         let tagsSpan = ''
         for(let tag of item.tags){
