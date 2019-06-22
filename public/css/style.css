@@ -82,12 +82,6 @@ footer > #endWords{
   padding-bottom: 10px;
 }
 
-div.tools{
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-}
-
 .list{
   /* background-color: white; */
 }
@@ -172,20 +166,21 @@ div.tools{
 
 .tools{
   position: fixed;
+  left: 5%;
   bottom: 40px;
-  right: 40px;
   width: 40px;
   height: auto;
 }
 
-.tools button{
+.tools > button{
   background-color: #222222;
   border: none;
+  outline: none;
   width: 40px;
   height: 40px;
   margin: 2px 0;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 40px;
   color: white;
 }

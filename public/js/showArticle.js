@@ -39,7 +39,7 @@ function beginAnimation(node){
  */
 function showArticle(node, info){
   // 切换选择栏
-  $('.list').children().removeClass()
+  $('.list li').removeClass()
   $(node).addClass('selected')
 
   // 切换地址
@@ -181,7 +181,7 @@ function createArtList(data) {
   // 根据URL#后的参数找到对应的文章并点击
   // 伪造搜索功能
   if(decodeURIComponent(location.hash)){
-    for(let item of $('.list').children()){
+    for(let item of $('.list li')){
       if(item.id == decodeURIComponent(location.hash))
         return $(item).click()
     }
