@@ -1,7 +1,7 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: Georgia, serif, Born, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
   color: #24292e;
   font-size: 18px;
   word-wrap: break-word;
@@ -198,7 +198,7 @@
 
 .markdown-body blockquote {
   margin: 12px 0;
-  padding: 0 1em;
+  padding: 5px 1em;
   background-color: #f1f1f1;
   border-left: 0.25em solid #222222;
 }
@@ -268,18 +268,18 @@
 
 .markdown-body h1 {
   padding-bottom: 0.3em;
-  font-size: 2em;
+  font-size: 1.7em;
   border-bottom: 1px solid #eaecef;
 }
 
 .markdown-body h2 {
   padding-bottom: 0.3em;
-  font-size: 1.5em;
+  font-size: 1.4em;
   border-bottom: 1px solid #eaecef;
 }
 
 .markdown-body h3 {
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 
 .markdown-body h4 {
@@ -409,12 +409,14 @@
 
 .markdown-body .highlight pre,
 .markdown-body pre {
-  padding: 16px;
+  padding: 10px 20px;
   overflow: auto;
-  font-size: 85%;
+  font-size: 0.8em;
   line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
+  background-color: #272B35;
+  color: #abb2bf;
+  border-radius: 5px;
+  margin: 5px 0;
 }
 
 .markdown-body pre code {

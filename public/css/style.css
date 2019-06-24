@@ -13,13 +13,13 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: Georgia, serif !important;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
   background-color: #eee;
   color: #121212;
   font-size: 18px;
 }
 
-div#content{
+#content{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ div#content{
   align-items: center;
 }
 
-div#content > header{
+#content > header{
   width: 90%;
   height: 80px;
   padding: 0 5%;
@@ -49,7 +49,7 @@ header > #subName{
   margin-left: 15px;
 }
 
-div#mainDiv{
+#mainDiv{
   margin: 10px 0;
   width: 90%;
   display: flex;
@@ -57,11 +57,11 @@ div#mainDiv{
   justify-content: flex-start;
   align-items: flex-start;
 }
-div#mainDiv > div.list{
+#mainDiv > .list{
   width: 250px;
   opacity: 0;
 }
-div#mainDiv > article.markdown-body{
+#mainDiv > article.markdown-body{
   /* margin: 0 10px; */
   padding: 20px 10px;
   flex: 1 1 auto;
