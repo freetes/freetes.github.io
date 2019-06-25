@@ -6,7 +6,7 @@ function toggleList (node) {
   // 电脑端
   if(screen.width > 960){
     if($('.list').css('display') == 'none'){
-      $('.markdown-body').animate({width: '100%', padding: '20px 10px'}, ANIMATION_TIME).promise().done(()=>{
+      $('.markdown-body').animate({width: '100%', padding: '20px'}, ANIMATION_TIME).promise().done(()=>{
         $('.list').toggle(ANIMATION_TIME).promise().done(()=>{
           $(node).attr('onclick', 'toggleList(this)')
         })
@@ -14,7 +14,7 @@ function toggleList (node) {
     }
     else{
       $('.list').toggle(ANIMATION_TIME).promise().done(function (){
-        $('.markdown-body').animate({ width: '70%', padding: '20px 14%'}, ANIMATION_TIME).promise().done(()=>{
+        $('.markdown-body').animate({ width: '70%', padding: '20px 15%'}, ANIMATION_TIME).promise().done(()=>{
           $(node).attr('onclick', 'toggleList(this)')
         })
       })
