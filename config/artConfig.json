@@ -3,8 +3,8 @@
     {
       "path": "./articles/about-me.md",
       "title": "关于我",
-      "subtitle": "about me",
-      "date": "2018-6-17 16:32",
+      "subtitle": "About me",
+      "date": "2018-06-17 16:32",
       "tags": [
         "生活",
         "原创"
@@ -14,10 +14,9 @@
       "path": "./articles/how-to-use-github.md",
       "title": "浅谈如何使用GitHub",
       "subtitle": "",
-      "date": "2018-6-17 17:52",
+      "date": "2018-06-17 17:52",
       "tags": [
         "技术",
-        "生活",
         "原创"
       ]
     },
@@ -25,7 +24,7 @@
       "path": "./articles/markdown-grammar.md",
       "title": "Markdown语法",
       "subtitle": "",
-      "date": "2018-6-20 9:20",
+      "date": "2018-06-20 9:20",
       "tags": [
         "技术",
         "收藏"
@@ -35,7 +34,7 @@
       "path": "./articles/js-ctrl-url.md",
       "title": "'伪造'URL，了解一下",
       "subtitle": "This article explains the use of JavaScript to control the url",
-      "date": "2018-6-21 21:20",
+      "date": "2018-06-21 21:20",
       "tags": [
         "js",
         "技术",
@@ -44,7 +43,7 @@
     },
     {
       "path": "./articles/css3-flex.md",
-      "date": "2018-6-23 22:40",
+      "date": "2018-06-23 22:40",
       "title": "CSS3 Flex布局参考",
       "subtitle": "",
       "tags": [
@@ -55,7 +54,7 @@
     },
     {
       "path": "./articles/macos-apps.md",
-      "date": "2018-9-14 18:01",
+      "date": "2018-09-14 18:01",
       "title": "Mac上一些好用的软件",
       "subtitle": "全是免费的啦",
       "tags": [
@@ -65,7 +64,7 @@
     },
     {
       "path": "./articles/first-web-exam.md",
-      "date": "2018-9-18 22:37",
+      "date": "2018-09-18 22:37",
       "title": "记头条的笔试",
       "subtitle": "",
       "tags": [
@@ -75,9 +74,9 @@
     },
     {
       "path": "./articles/first-face-exam.md",
-      "date": "2018-9-21 14:14",
+      "date": "2018-09-21 14:14",
       "title": "记头条的一面",
-      "subtitle": "自己太菜，感触颇深",
+      "subtitle": "技术盲点多，感触颇深",
       "tags": [
         "日记",
         "面试"
@@ -85,13 +84,115 @@
     },
     {
       "path": "./articles/“群组签吧”小程序介绍.md",
-      "date": "2019-6-21 19:40",
+      "date": "2019-06-21 19:40",
       "title": "「群组签吧」小程序介绍文档",
       "subtitle": "应该算一个 paper 吧",
       "tags": [
         "原创",
         "Paper",
         "小程序"
+      ]
+    },
+    {
+      "path": "./articles/React-tutorial.md",
+      "date": "2019-06-25 14:06",
+      "title": "React.js学习笔记",
+      "subtitle": "持续更新中...",
+      "tags": [
+        "React",
+        "学习笔记"
+      ]
+    },
+    {
+      "path": "./articles/闭包.md",
+      "date": "2019-07-27 19:09",
+      "title": "JS中实用的闭包",
+      "subtitle": "论如何优雅的使用闭包",
+      "tags": [
+        "JS",
+        "技术"
+      ]
+    },
+    {
+      "path": "./articles/prototype.md",
+      "date": "2019-07-28 20:33",
+      "title": "JS中原型链的创建",
+      "subtitle": "四种方法创建原型链",
+      "tags": [
+        "JS",
+        "技术",
+        "收藏"
+      ]
+    },
+    {
+      "path": "./articles/Node.js见解（一）.md",
+      "date": "2019-08-15 22:18",
+      "title": "Node.js见解（一）",
+      "subtitle": "论如何入门Node.js",
+      "tags": [
+        "Node.js",
+        "技术",
+        "总结"
+      ]
+    },
+    {
+      "path": "./articles/Node.js见解（二）.md",
+      "date": "2019-08-17 23:02",
+      "title": "Node.js见解（二）",
+      "subtitle": "论如何入门Node.js",
+      "tags": [
+        "Node.js",
+        "技术",
+        "总结"
+      ]
+    },
+    {
+      "path": "./articles/MongoDB in Node.js.md",
+      "date": "2019-08-20 22:09",
+      "title": "MongoDB in Node.js",
+      "subtitle": "",
+      "tags": [
+        "MongoDB",
+        "Node.js"
+      ]
+    },
+    {
+      "path": "./articles/Express.js A web framework for Node.js.md",
+      "date": "2019-08-24 22:31",
+      "title": "Express.js见解",
+      "subtitle": "",
+      "tags": [
+        "Express.js",
+        "Node.js"
+      ]
+    },
+    {
+      "path": "./articles/分享.md",
+      "date": "2019-12-26 19:14",
+      "title": "微信技术公众号分享",
+      "subtitle": "一些长期保持更新的高质量公众号",
+      "tags": [
+        "公众号",
+        "分享"
+      ]
+    },
+    {
+      "path": "./articles/中文技术文档参考规范.md",
+      "date": "2019-12-26 19:40",
+      "title": "中文技术文档参考规范",
+      "subtitle": "",
+      "tags": [
+        "收藏"
+      ]
+    },
+    {
+      "path": "./articles/Fetch().md",
+      "date": "2020-01-30 20:04",
+      "title": "fetch()",
+      "subtitle": "现代的AJAX",
+      "tags": [
+        "JS",
+        "技术"
       ]
     }
   ],
@@ -108,6 +209,15 @@
     "日记",
     "面试",
     "Paper",
-    "小程序"
+    "小程序",
+    "JS",
+    "React",
+    "公众号",
+    "分享",
+    "Node.js",
+    "总结",
+    "MongoDB",
+    "学习笔记",
+    "Express.js"
   ]
 }
